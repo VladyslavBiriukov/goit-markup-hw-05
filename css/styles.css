@@ -18,6 +18,8 @@
   /* --card-set-gap: 30px; */
   --indent: 30px;
   --items: 3;
+  --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --time-function: 250ms;
 }
 
 body {
