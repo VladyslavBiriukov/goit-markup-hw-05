@@ -342,6 +342,28 @@ img {
 }
 
 /*--WHAT WE DO--*/
+.image-item {
+  position: relative;
+}
+
+.overlay-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.overlay-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
 
 /* --OUR TEAM-- */
 .our-team {
@@ -487,6 +509,7 @@ img {
   border: 0;
   padding: 6px 22px;
   margin-bottom: 50px;
+  
 
   color: var(--title-text-color);
   background-color: var(--button-grey-color);
@@ -545,4 +568,35 @@ img {
 .projects .text {
   font-size: 16px;
   line-height: 1.88;
+}
+
+.projects-thumb {
+  position: relative;
+  overflow: hidden; 
+}
+.overflow-projects{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+  transition: transform var(--time-function) var(--cubic-function);
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.projects-link:hover .overflow-projects,
+.projects-link:focus .overflow-projects {
+  transform: translateY(0);
+
+}
+.overlflow-text {
+    
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.56;
+  
+    color: var(--primary-white-color);
 }
