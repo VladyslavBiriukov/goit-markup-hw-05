@@ -615,3 +615,52 @@ transition: color var(--animation-function), background-color var(--animation-fu
   
     color: var(--primary-white-color);
 }
+/* MODAL-WINDOW */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity var(--animation-function);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  min-height: 581px;
+
+  transform: translateX(-50%) translateY(-50%);
+  background-color: white;
+  transition: opacity var(--animation-function), transorm var(--animation-function);
+}
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  transform: translateX(50%) translateY(50%);
+}
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
