@@ -625,12 +625,16 @@ transition: color var(--animation-function), background-color var(--animation-fu
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity var(--animation-function);
+  opacity: 1;
+  transition: opacity var(--animation-function), visibility var(--animation-function);
 }
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%);
 }
 .modal {
   position: absolute;
@@ -639,14 +643,14 @@ transition: color var(--animation-function), background-color var(--animation-fu
   width: 528px;
   min-height: 581px;
 
-  transform: translateX(-50%) translateY(-50%);
   background-color: white;
-  transition: opacity var(--animation-function), transorm var(--animation-function);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%);
+  transition: transorm var(--animation-function);
 }
-.backdrop.is-hidden .modal {
-  opacity: 0;
-  transform: translateX(50%) translateY(50%);
-}
+
 .modal-btn {
   position: absolute;
   top: 8px;
